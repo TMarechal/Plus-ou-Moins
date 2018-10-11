@@ -16,15 +16,15 @@
             <span class="topline-world">WORLD</span>
             <span class="topline-time">TIME</span>
             <span class="bottomline-score">012345</span>
-            <span class="bottomline-coin"><img src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/Coin.gif"
-                    height="40px"> x OO</span>
+            <span class="bottomline-coin" id=""><img src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/Coin.gif"
+                    height="40px"> x <span id="nbPieces">OO</span></span>
             <span class="bottomline-world">1 - 1</span>
             <span class="bottomline-time">050</span>
             <div class="jeu ">
                 <form> 
                     <p>Devinez le nombre de pièces présent dans le bloc</p>
                     <input id="Saisie" class="WidthInput BorderInput MarginTop60 TextCenter" type="number" placeholder="Saisissez un nombre compris entre 0 et 100"><br>
-                    <button id="NewGame" type="button" class="MarginTop TextCenter">Nouvelle partie</button>
+                    <a href="javascript:window.location.reload()"><button id="NewGame" type="button" class="MarginTop TextCenter">Nouvelle partie</button></a>
                     <button id="Valider" type="button">Valider</button>
                 </form>
             </div>
