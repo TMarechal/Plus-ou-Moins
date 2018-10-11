@@ -1,6 +1,6 @@
 var Random = nb_random(0, 101);
 var SaisieN;
-var Compteur;
+var Compteur = 0;
 var ButtonV = document.getElementById('Valider');
 
 function nb_random(min, max) {
@@ -10,20 +10,18 @@ function nb_random(min, max) {
 
 console.log(Random);
 ButtonV.addEventListener('click', Validation)
-function Validation() {
-    var Random = nb_random(0, 101);
+function Validation(e) {
+    e.preventDefault();
     var SaisieN = document.getElementById('Saisie').value;
     if (SaisieN == Random) {
-        alert('Gagné');
+        alert('C est Gagné');
         return false;
-    }
-    else if (SaisieN < Random) {
-        Compteur= Compteur+1;
-        alert('Plus grand');
-    }
-    if (SaisieN > Random) {
-        Compteur= Compteur+1;
-        alert('Plus petit');
-    }
+    } else {
+        if (SaisieN < Random) {
+            alert('C est Plus');
+        } else {
+            alert('C est Moins');
+        }
 
+    }
 }
