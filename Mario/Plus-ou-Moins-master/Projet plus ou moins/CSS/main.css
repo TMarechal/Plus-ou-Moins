@@ -1,0 +1,300 @@
+@import "Reset.css";
+
+.jeu {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.h1 {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Texte {
+    display: flex;
+    justify-content: center;
+}
+
+.WidthInput {
+    width: 275px;
+}
+
+.BorderInput {
+    border-style: none;
+    border-bottom: 1px solid grey;
+}
+
+.MarginTop {
+    margin-top: 40px;
+}
+.MarginTop60{
+    margin-top: 60px;
+}
+
+/*Mario*/
+.topline-mario {
+    position: absolute;
+    top: 40px;
+}
+
+.topline-world {
+    position: absolute;
+    top: 40px;
+    left: 55%;
+}
+
+.topline-time {
+    position: absolute;
+    top: 40px;
+    left: 85%;
+}
+
+.bottomline-score {
+    position: absolute;
+    top: 90px;
+}
+
+.bottomline-coin {
+    position: absolute;
+    top: 80px;
+    left: 30%;
+}
+
+.bottomline-world {
+    position: absolute;
+    top: 90px;
+    left: 55.7%;
+}
+
+.bottomline-time {
+    position: absolute;
+    top: 90px;
+    left: 85.5%;
+}
+
+
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.sky,
+.ground {
+    position: relative;
+    /*Because we want to position items on and in them!*/
+}
+
+.sky {
+    height: 92%;
+    background-color: #548CFF;
+}
+
+.ground {
+    height: 8%;
+    background-color: #C84C0C;
+    background-image: url('https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/groundblock.png');
+
+}
+
+.scorebar {
+    position: absolute;
+    height: 120px;
+    width: 100%;
+
+    font-family: 'Press Start 2P', cursive;
+    font-size: 180%;
+    color: white;
+
+    padding-left: 50px;
+    padding-right: 50px;
+    line-height: 0.2;
+}
+
+.cloud {
+    position: absolute;
+    height: 100px;
+
+}
+
+.cloud:nth-child(2) {
+    top: 120px;
+    -webkit-animation: wind 80s both infinite linear reverse;
+    animation: wind 45s both infinite linear reverse;
+}
+
+.cloud:nth-child(3) {
+    top: 280px;
+    -webkit-animation: wind 50s both infinite linear reverse;
+    animation: wind 30s both infinite linear reverse;
+}
+
+.cloud:nth-child(4) {
+    top: 450px;
+    -webkit-animation: wind 30s both infinite linear reverse;
+    animation: wind 30s both infinite linear reverse;
+}
+
+.skyblocks {
+    position: absolute;
+    top: -250px;
+}
+
+.brick {
+    position: fixed;
+    margin: -2px;
+}
+
+.brick:nth-child(1) {
+    left: 600px;
+}
+
+.brick:nth-child(2) {
+    left: 670px;
+}
+
+.brick:nth-child(3) {
+    left: 740px;
+}
+
+.brick:nth-child(4) {
+    left: 810px;
+}
+
+.brick:nth-child(5) {
+    left: 880px;
+}
+
+
+
+
+.bush {
+    position: absolute;
+    top: -70px;
+}
+
+.bush:nth-child(1) {
+    left: 800px;
+}
+
+.bush:nth-child(2) {
+    left: 900px;
+    ;
+}
+
+.bush:nth-child(3) {
+    left: 1500px;
+    ;
+}
+
+.toad {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: -200px;
+    left: 1250px;
+}
+
+.toad2 {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: -250px;
+    left: 300px;
+}
+
+.hill {
+    position: absolute;
+    top: -70px;
+    left: 300px;
+}
+
+.mario {
+    position: absolute;
+    width: 71px;
+    height: 72px;
+    background: url('https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/mariowalking/result.png') left center;
+    top: -70px;
+    left: 0px;
+
+    -webkit-animation: play 0.8s steps(4) infinite,
+        run 10s both infinite linear;
+
+    animation: play 0.8s steps(4) infinite,
+        run 10s both infinite linear;
+}
+
+.sonic {
+    position: absolute;
+    width: 71px;
+    height: 72px;
+    background: url("https://media.giphy.com/media/FQNPPtRC43SRG/giphy.gif")  left center;
+    top: -70px;
+    left: 0px;
+
+    -webkit-animation: play 0.8s steps(4) infinite,
+        run 1s both infinite linear;
+
+    animation: play 0.8s steps(4) infinite,
+        run 1s both infinite linear;
+}
+
+
+
+@-webkit-keyframes play {
+    100% {
+        background-position: -284px;
+    }
+}
+
+@keyframes play {
+    100% {
+        background-position: -284px;
+    }
+}
+
+@-webkit-keyframes run {
+    from {
+        left: -200px;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes run {
+    from {
+        left: -200px;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+@-webkit-keyframes wind {
+    from {
+        left: -300px;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes wind {
+    from {
+        left: -300px;
+    }
+
+    to {
+        left: 100%;
+    }
+}
